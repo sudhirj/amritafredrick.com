@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Amrita Fredrick : Aerobics, Zumba and Fitness in Chennai</title>
+	<link rel="stylesheet" href="/static/css/stylesheets/screen.css" type="text/css" media="screen" charset="utf-8">
+</head>
+<body>
+	<div id="wrapper" class="{{wrapper_classes}}">
+		<h1>Amrita Fredrick</h1>
+		{% block tagline %}
+
+		{% endblock %}
+		<div class="nav">
+			<ul>
+				{%- if wrapper_classes != 'home' -%}<li><a href="/">home</a></li>{%- endif -%}<li><a href="/classes/">classes</a></li><li><a href="/about/">about</a></li><li><a href="/contact/">contact</a></li>
+			</ul>
+		</div>
+		{% block content %}
+
+		{% endblock %}
+		<div class="likes">
+			<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.amritafredrick.com&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:21px;" allowTransparency="true"></iframe>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.DS_Store
+.installed.cfg
+bin/
+eggs/
+var/
+app/static/css/.sass-cache/*
+app/lib/dist/*
+app/static/css/stylesheets/*
+*.pyc

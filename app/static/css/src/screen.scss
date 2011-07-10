@@ -1,0 +1,143 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:r,b);
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import "compass/reset";
+@import "compass/css3";
+
+html {
+    background: url(/static/bg2.jpg) fixed left bottom no-repeat;
+}
+
+
+body {
+    background: none;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #333;
+    font-family: 'Droid Serif', Georgia;
+}
+
+#wrapper {
+    background: rgba(255,255,255,0.9);
+    border : 4px solid rgba(225,225,225,0.35);
+    border-top: none;
+    width: 600px;
+    margin: 0 auto 4em;
+    padding: 2em;
+    @include border-bottom-radius(1em);
+    position: relative;
+    @include single-box-shadow();
+    &.home {
+        border : 4px solid rgba(225,225,225,0.35);
+        @include border-top-radius(1em);
+        text-align: center;
+        margin: 10% auto ;
+        h3 {
+            margin-bottom: 2em;
+        }
+    }
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 2em;
+    color: #666;
+    
+}
+h1 {
+    font-size: 3em;
+    font-family: 'Architects Daughter', Georgia;
+    text-align: center;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+.nav {
+    text-align: center;
+    margin: 1em auto 2.5em;
+    ul {
+        li {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            a {
+                padding: 0.5em 0.809em;
+                background: #efefef;
+                border: thin solid #efefef;
+                text-decoration: none;
+                color: #666;
+                @include transition-duration(0.5s);
+                &:hover{
+                    color: #333;
+                    background: #fff;
+                }
+            }
+            &:first-child a {
+                @include border-left-radius(0.5em);
+                padding-left: 1em;
+            }
+            &:last-child a {
+                @include border-right-radius(0.5em);
+                padding-right: 1em;
+            }
+        }
+    }
+}
+
+table.classes {
+    font-size: 0.8em;
+    width: 100%;
+    font-family: 'Droid Sans';
+    margin: 0.5em 0 1em;
+    td {
+        padding: 0.8em;
+        vertical-align: top;
+        &.lined {
+            border-bottom: thin solid #ccc;
+        }
+        &.first {
+            border-top: thin solid #ccc;
+        }
+    }
+}
+.starred {
+    font-size: 0.8em;
+}
+.explanations {
+    margin: 1.5em 0;
+    p {
+        margin-bottom:2em;
+    }
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: thin dashed #ccc;
+}
+.likes {
+    position: absolute;
+    right:0.5em;
+    top:0.5em;
+}
+.contact-set{
+    margin: 0.5em 0 1.5em;
+}
+.address {
+    margin: 0.5em 0.7em 2em;
+    .title {
+        font-weight: bold;
+    }
+    .map {
+        float: right;
+        img {
+            @include border-radius(0.5em);
+        }
+    }
+}
+
+.clear {
+    clear:both;
+}
