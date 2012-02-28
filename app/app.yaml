@@ -1,12 +1,17 @@
-application: amritafredrick
+application: amritafredrick-hr
 version: 1
-runtime: python
+runtime: python27
+threadsafe: no
 api_version: 1
 
 builtins:
 - appstats: on
 - datastore_admin: on
 - remote_api: on
+
+libraries:
+- name: jinja2
+  version: "2.6"
 
 inbound_services:
 - warmup

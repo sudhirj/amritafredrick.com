@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div id="liveblog"></div>
+  <script type="text/javascript">
+  var _wf = _wf || {};
+
+  // ===== ONLY MODIFY THE TWO VARIABLES BELOW =====
+
+  // Your blog URL on Wordfaire - if you blog is at wordfaire.com/myblog, then set it to 'myblog'.
+  _wf.blogUrl = 'amritafredrick';
+
+  // The ID of the element that you want to display the liveblog in. This can also be a HTML element reference or any other jQuery selector (which returns a single element).
+  _wf.holder = '#liveblog';
+
+  // ===== ONLY MODIFY THE TWO VARIABLES ABOVE =====
+
+  _wf.baseUrl = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'wordfaire.appspot.com/';
+  _wf.blogBaseUrl = _wf.baseUrl + _wf.blogUrl + '/';
+  (function() {
+  	var wfs = document.createElement('script'); wfs.type = 'text/javascript'; wfs.async = true;
+  	wfs.src = _wf.baseUrl + 'static/scripts/output/reader.js.compiled.js';
+  	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wfs, s);
+  })();
+  </script>
+{% endblock %}

@@ -15,5 +15,5 @@ from tipfyext.jinja2 import Jinja2Mixin
 class HomeHandler(RequestHandler, Jinja2Mixin):
     def get(self, page = None):
         if not page: page = 'home'
-        if page not in ['home','about','classes','contact']: self.abort(404)
+        if page not in ['home','about','classes','contact','blog']: self.abort(404)
         return self.render_response('%s.html' % page)

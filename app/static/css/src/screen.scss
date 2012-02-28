@@ -5,9 +5,8 @@
 @import "compass/css3";
 
 html {
-    background: url(/static/bg2.jpg) fixed left bottom no-repeat;
+  background: url(/static/concrete_wall_2.png) fixed;
 }
-
 
 body {
     background: none;
@@ -18,7 +17,7 @@ body {
 }
 
 #wrapper {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.618);
     border : 4px solid rgba(225,225,225,0.35);
     border-top: none;
     width: 600px;
@@ -140,4 +139,20 @@ a {
 
 .clear {
     clear:both;
+}
+
+#liveblog {
+  .message {
+    display: none;
+  }
+  .links {
+    display: none;
+  }
+  .post {
+    .time {
+      font-weight: bold;
+    }
+    margin-bottom: 1.618em;
+  }
+  
 }
